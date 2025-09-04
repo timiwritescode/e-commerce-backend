@@ -1,0 +1,34 @@
+{
+  "name": "e-commerce-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/src/main",
+  "scripts": {
+    "build": "nest build",
+    "start:dev": "nest start --watch",
+    "start:prod": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timiwritescode/e-commerce-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/timiwritescode/e-commerce-backend/issues"
+  },
+  "homepage": "https://github.com/timiwritescode/e-commerce-backend#readme",
+  "dependencies": {
+    "@nestjs/common": "^11.1.6",
+    "@nestjs/core": "^11.1.6",
+    "@nestjs/platform-express": "^11.1.6",
+    "reflect-metadata": "^0.2.2"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^11.0.10",
+    "@nestjs/schematics": "^11.0.7",
+    "@types/node": "^24.3.1",
+    "typescript": "^5.9.2"
+  }
+}
