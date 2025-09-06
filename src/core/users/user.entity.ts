@@ -1,6 +1,6 @@
-import { Column, CreateDateColumn, Entity, JoinTable, ManyToMany, PrimaryColumn, UpdateDateColumn } from "typeorm";
+import { BeforeInsert, Column, CreateDateColumn, Entity, JoinTable, ManyToMany, PrimaryColumn, UpdateDateColumn } from "typeorm";
 import { Role } from "./role.entity";
-
+import {v4 as uuidv4} from "uuid";
 
 
 @Entity("users")
@@ -29,4 +29,9 @@ export class User {
     @ManyToMany(() => Role, (role) => role.users, {cascade: true})
     @JoinTable()
     roles: Role[]; 
+
+    @BeforeInsert()
+    private setFields() {
+        this.id = uuidv4();
+    }
 }

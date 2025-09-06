@@ -13,7 +13,8 @@ export class Role {
 
     @Column({
         type: 'enum', 
-        enum: UserRole})
+        enum: UserRole,
+        unique: true})
     name: UserRole;
 
     @ManyToMany(() => User, (user) => user.roles)
