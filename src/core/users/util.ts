@@ -1,6 +1,6 @@
-import { UserPrefix } from "./userPrefix";
+import { UserIDPrefixes } from "./userPrefix";
 
-export function generateUserId(prefix: UserPrefix) {
+export function generateUserId(prefix: UserIDPrefixes) {
     return prefix + "_" + generateRandomString(20);
 }
 

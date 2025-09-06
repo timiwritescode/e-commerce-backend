@@ -7,7 +7,7 @@ import { SignUpDto } from "../authentication/signUp.dto";
 import { Role } from "./role.entity";
 import { UserDto } from "./user.dto";
 import { generateUserId } from "./util";
-import { UserPrefix } from "./userPrefix";
+import { UserIDPrefixes } from "./userPrefix";
 
 @Injectable()
 export class UserService {
@@ -44,14 +44,14 @@ export class UserService {
     private setUserId(role: UserRole, userId: string) {
         switch (role) {
             case UserRole.USER:
-                userId = generateUserId(UserPrefix.ADMIN);
+                userId = generateUserId(UserIDPrefixes.ADMIN);
                 break;
             case UserRole.AGENT:
-                userId = generateUserId(UserPrefix.AGENT);
+                userId = generateUserId(UserIDPrefixes.AGENT);
                 break;
 
             default:
-                userId = generateUserId(UserPrefix.CUSTOMER);
+                userId = generateUserId(UserIDPrefixes.CUSTOMER);
                 break;
         }
         return userId;

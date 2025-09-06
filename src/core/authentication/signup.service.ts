@@ -6,6 +6,11 @@ import { SignUpDto } from "./signUp.dto";
 import { UserDto } from "../users/user.dto";
 import { QueryFailedError } from "typeorm";
 
+
+/**
+ * Class provides service to handle sign up flow across admin, agent and customer module
+ * to reduce redundacy of the same flow across the three moduless
+ */
 @Injectable()
 export class SignUpService {
     constructor(

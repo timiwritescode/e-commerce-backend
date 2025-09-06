@@ -1,6 +1,13 @@
 import { ApiProperty } from "@nestjs/swagger";
 import { IsAlphanumeric, IsEmail, IsNotEmpty, MinLength } from "class-validator";
 
+
+/**
+ * Class proivdes a base validation class for the signup dto 
+ * across the three modules of admin, agent and customer
+ * to eliminate redundancy. Each sign up flow can extend class
+ * with custom functionalities as needed
+ */
 export class SignUpDto {
    @ApiProperty()
     @IsEmail()
